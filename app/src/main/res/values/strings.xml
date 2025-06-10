@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Modsen-Tasks-Oleg</string>
+    <string name="task1_details_title">Task 1 Details</string>
+    <string name="task1_success_title">Success</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="log_In_button">Log In</string>
+    <string name="success_screen_text">You did everything successfully</string>
 </resources>
