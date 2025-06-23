@@ -14,6 +14,13 @@ import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.example.modsen_tasks_oleg.data.repository.AuthRepositoryImpl
+import com.example.modsen_tasks_oleg.domain.repository.IAuthRepository
+import com.example.modsen_tasks_oleg.domain.usecase.LoginUseCase
+import com.example.modsen_tasks_oleg.ui.screen.task1.model.Task1ViewModel
+import com.example.modsen_tasks_oleg.ui.screen.taskList.TaskListViewModel
+import org.koin.core.module.dsl.viewModel
+import org.koin.dsl.module
 
 val AppModule = module {
     single<IAuthRepository> { AuthRepositoryImpl() }
@@ -32,5 +39,4 @@ val AppModule = module {
             .build()
             .create(IPostsApi::class.java)
     }
-
 }
