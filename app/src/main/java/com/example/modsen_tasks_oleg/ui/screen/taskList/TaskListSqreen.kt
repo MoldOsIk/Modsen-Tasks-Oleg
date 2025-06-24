@@ -37,6 +37,7 @@ fun TaskListScreen(navController: NavController) {
         event.filterIsInstance<TaskListEvent.Navigate>().collect { event ->
             when (event.task) {
                 TaskEnum.TASK_1 -> navController.navigate("task1_detail")
+                TaskEnum.TASK_2 -> navController.navigate("task2_screen")
             }
         }
     }
