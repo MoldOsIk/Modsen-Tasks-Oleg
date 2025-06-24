@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.modsen_tasks_oleg.ui.screen.task1.Task1Screen
 import com.example.modsen_tasks_oleg.ui.screen.task1.Task1SuccessScreen
+import com.example.modsen_tasks_oleg.ui.screen.task2.Task2Screen
 import com.example.modsen_tasks_oleg.ui.screen.taskList.TaskListScreen
 
 @Composable
@@ -14,5 +15,6 @@ fun SetupNavGraph(navController: NavHostController) {
         composable("task_list") { TaskListScreen(navController = navController) }
         composable("task1_detail") { Task1Screen(navController = navController) }
         composable("success_screen") { Task1SuccessScreen() }
+        composable("task2_screen") { Task2Screen(navController = navController) }
     }
 }
