@@ -9,4 +9,7 @@
     <string name="no_internet_failure">No internet connection</string>
     <string name="unknown_error">Error corrupted</string>
     <string name="task2_title">Posts List</string>
+    <string name="text_for_search">Search by title or body...</string>
+    <string name="posts_list_title">Posts List</string>
+    <string name="comments_title">Posts and Comments</string>
 </resources>

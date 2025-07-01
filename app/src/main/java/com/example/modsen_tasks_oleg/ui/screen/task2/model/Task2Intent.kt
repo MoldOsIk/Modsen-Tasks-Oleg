@@ -1,8 +1,9 @@
 package com.example.modsen_tasks_oleg.ui.screen.task2.model
 
-import com.example.modsen_tasks_oleg.data.model.PostDomainModel
+import com.example.modsen_tasks_oleg.domain.model.PostDomainModel
 
-sealed interface PostsIntent {
-    object LoadPosts : PostsIntent
-    data class SelectPost(val post: PostDomainModel) : PostsIntent
+sealed interface Task2Intent {
+    object LoadPosts : Task2Intent
+    data class SelectPost(val post: PostDomainModel) : Task2Intent
+    data class UpdateSearchQuery(val query: String) : Task2Intent
 }

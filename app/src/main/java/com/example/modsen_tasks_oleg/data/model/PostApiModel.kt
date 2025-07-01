@@ -1,5 +1,6 @@
 package com.example.modsen_tasks_oleg.data.model
 
+import com.example.modsen_tasks_oleg.domain.model.PostDomainModel
 import com.google.gson.annotations.SerializedName
 
 data class PostApiModel(

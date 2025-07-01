@@ -1,8 +1,9 @@
 package com.example.modsen_tasks_oleg.data.repository
 
 import com.example.modsen_tasks_oleg.data.remote.IPostsApi
+import com.example.modsen_tasks_oleg.domain.model.CommentDomainModel
 import com.example.modsen_tasks_oleg.domain.model.MyExceptionDomainModel
-import com.example.modsen_tasks_oleg.data.model.PostDomainModel
+import com.example.modsen_tasks_oleg.domain.model.PostDomainModel
 import com.example.modsen_tasks_oleg.domain.model.TResult
 import com.example.modsen_tasks_oleg.domain.repository.IPostsRepository
 import kotlinx.coroutines.Dispatchers
@@ -24,6 +25,17 @@ class PostsRepositoryImpl(
                 val result = api.getPosts()
                 val mappedResult = result.map { it.toDomainModel() }
                 TResult.Success<List<PostDomainModel>, MyExceptionDomainModel>(mappedResult)
+            }.getOrElse {
+                TResult.Error(it.toMyExceptionDomainModel())
+            }
+        }
+
+    override suspend fun getComments(postId: Int): TResult<List<CommentDomainModel>, MyExceptionDomainModel> =
+        withContext(Dispatchers.IO) {
+            runCatching {
+                val result = api.getComments(postId)
+                val mappedResult = result.map { it.toDomainModel() }
+                TResult.Success<List<CommentDomainModel>, MyExceptionDomainModel>(mappedResult)
             }.getOrElse {
                 TResult.Error(it.toMyExceptionDomainModel())
             }
