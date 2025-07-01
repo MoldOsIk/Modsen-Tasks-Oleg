@@ -14,7 +14,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.modsen_tasks_oleg.data.model.PostDomainModel
+import com.example.modsen_tasks_oleg.domain.model.PostDomainModel
 
 @Composable
 fun PostItem(

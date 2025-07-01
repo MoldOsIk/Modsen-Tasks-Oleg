@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -49,7 +51,7 @@ dependencies {
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-
+    implementation ("io.insert-koin:koin-androidx-navigation:3.5.0")
     implementation(libs.android.appcompat)
     implementation(libs.koin.android)
     implementation(libs.koin.androidx.compose)

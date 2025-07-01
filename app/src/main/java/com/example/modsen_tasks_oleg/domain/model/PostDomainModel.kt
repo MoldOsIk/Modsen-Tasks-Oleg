@@ -1,4 +1,5 @@
-package com.example.modsen_tasks_oleg.data.model
+package com.example.modsen_tasks_oleg.domain.model
+
 
 data class PostDomainModel(
     val id: Int,
